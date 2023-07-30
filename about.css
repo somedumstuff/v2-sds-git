@@ -1,0 +1,127 @@
+#first_section{
+    height: 100vh;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+
+}
+
+#back_arrow{
+    background-image: url(images/arrow.svg);
+    background-repeat: no-repeat;
+    rotate: -90deg;
+    width: 45px;
+    height: 45px;
+    margin-bottom: 25px;
+    margin-left: 2%;
+}
+
+#back_arrow:hover{
+    cursor: pointer;
+}
+
+#item5{
+    margin-left: 2%;
+}
+
+#about_title{
+    display: flex;
+    font-size: 150px;
+    width: auto;
+    color: #fff;    
+    animation: scroll 48s infinite linear;
+    
+}
+
+
+#about_title_wrapper{
+    padding-top: 1%;
+    background-color: black;
+}
+
+#about_title{
+    display: flex;
+    font-size: 150px;
+    width: auto;
+    color: #fff;    
+    animation: scroll 48s infinite linear;
+}
+
+#about_description{
+    font-family: dogica;
+    padding: 0.5%;
+    padding-left: 2%;
+    font-size: 13px;
+    width: 80%;
+    margin-top: 2%;
+    letter-spacing: -0.2em;
+}
+
+
+
+#border{
+    width: 95%;
+    margin-left: 2%;
+    margin-right: 2%;
+    padding-top: 1%;
+    border-bottom: solid black 2px;
+}
+.marquee {
+   --gap: 1rem;
+   display: flex;
+   overflow: hidden;
+   user-select: none;
+   gap: var(--gap);
+}
+
+.marquee__content {
+   flex-shrink: 0;
+   display: flex;
+   min-width: auto;
+   margin-left: 30px;
+   gap: var(--gap);
+}
+
+@keyframes scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(calc(-100% - var(--gap)));
+    }
+  }
+
+#email, #instagram{
+    font-family: dogica;
+    letter-spacing: -0.125em;
+}
+
+#listening_to{
+    padding: 2%;
+}
+
+#listening_to, #curr_song{
+    font-family: offbit-r;
+    font-size: 65px;
+    letter-spacing: normal;
+}
+
+#star_hash{
+    font-family: offbit-r;
+    font-size: 14px;
+    padding-left: 2%;
+    letter-spacing: 0.5px;
+}
+a{
+    letter-spacing: 2px !important;
+}
+#insta_link, #email_link{
+    font-family: offbit-r;
+    font-size: 65px;
+    padding-left: 2%;
+    
+}
+
+#insta_link {
+    padding-top: 2%;
+}

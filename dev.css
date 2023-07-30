@@ -1,0 +1,9 @@
+#dev_message, #here{
+    font-size: 100px;
+    letter-spacing: 2px;
+    padding: 2%;
+}
+
+#here{
+    position: relative;
+}

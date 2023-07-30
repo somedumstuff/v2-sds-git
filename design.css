@@ -1,0 +1,161 @@
+body {overflow-y:scroll; min-height: 100vh;}
+
+#design_main_wrapper{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+#up_button{
+    position: fixed;
+    background-image: url(images/arrow.svg);
+    background-repeat: no-repeat;
+    width: 45px;
+    height: 45px;
+    z-index: 999;
+    bottom: 0;
+    right: 0;
+    margin: 2%;
+    opacity: 0;
+    mix-blend-mode: color-burn;
+    transition: all 1s;
+}
+
+#up_button:hover{
+    cursor: pointer;
+}
+
+#back_arrow:hover{
+    cursor: pointer;
+}
+
+
+#first_section{
+    position: absolute;
+    bottom: 1%;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.5s;
+}
+
+#item5{
+    justify-self: left;
+    margin-left: 2%;
+}
+
+#back_arrow_wrapper{
+    z-index: 999 !important;
+}
+
+#back_arrow{
+    background-image: url(images/arrow.svg);
+    background-repeat: no-repeat;
+    rotate: -90deg;
+    width: 45px;
+    height: 45px;
+    margin-bottom: 25px;
+    margin-left: 2%;
+    
+}
+
+#design_title_wrapper{
+    background-color: black;
+}
+
+#design_title{
+    display: flex;
+    font-size: 150px;
+    width: auto;
+    color: #fff;    
+    animation: scroll 48s infinite linear;
+}
+
+.marquee {
+   --gap: 1rem;
+   display: flex;
+   overflow: hidden;
+   user-select: none;
+   gap: var(--gap);
+}
+
+.marquee__content {
+   flex-shrink: 0;
+   display: flex;
+   min-width: auto;
+   margin-left: 30px;
+   gap: var(--gap);
+}
+
+
+@keyframes scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(calc(-100% - var(--gap)));
+    }
+  }
+
+
+#design_description{
+    font-family: dogica;
+    margin-left: 2%;
+    margin-top: 20px;
+}
+
+#gallery_main_wrapper{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    pointer-events:none
+}
+
+.image{
+    position: relative;
+    top:100%;
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.img_text{
+    position: absolute;
+    font-size: 100px;
+    color: #fff;
+    bottom: 4%;
+    padding: 4%;
+    width: 100%;
+    letter-spacing: normal;
+}
+
+.img_desc{
+    position:absolute;
+    font-size: dogica;
+    font-size: 18px;
+    color: #fff;
+    letter-spacing: 2px;
+    width: 40%;
+}
+
+#image14 > video{
+    width: 100vw;
+}
+
+#image16{
+    background-size: contain;
+}
+
+#image6, #image5> img{
+    filter: brightness(90%);
+}
+
+#end, #end_desc{
+    color: black;
+    
+}
+
+ span {
+    background-color: rgb(153, 255, 0);
+    letter-spacing: normal;
+}

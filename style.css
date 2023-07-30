@@ -1,0 +1,146 @@
+
+@font-face {
+    font-family: offbit-r;
+    src: url(fonts/OffBitTrial-Regular.otf);
+}
+
+@font-face {
+    font-family: offbit-norm;
+    src: url(fonts/OffBitTrial-101.otf);
+}
+
+@font-face {
+    font-family: offbit-bold;
+    src: url(fonts/OffBitTrial-Bold.otf);
+}
+
+@font-face {
+    font-family: barcode;
+    src: url(fonts/LibreBarcode128-Regular.ttf);
+}
+
+
+@font-face {
+    font-family: dogica;
+    src: url(fonts/dogica.otf);
+}
+
+* { margin:0; padding:0; box-sizing:border-box; font-family: offbit-r; letter-spacing: -4.5px; }
+body {overflow: hidden; }
+
+#preview_wrapper{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+    display: flex;
+}
+
+#preview{
+    width: 100%;
+    height: 100%;
+    align-self: center;
+    background-color: rgb(255, 255, 255);
+}
+
+#main_wrapper, #design_wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#main_wrapper{
+    overflow: hidden !important;
+}
+
+#main {
+    display: grid;
+    grid-template-rows: 3fr 3fr 3fr 3fr;
+    /* grid-auto-rows: 99vh; */
+    color: rgb(0, 0, 0);
+    align-items: center;
+    z-index: 999;
+}
+
+.item{
+    color: rgb(4, 4, 4);
+    font-size: 128px;
+    font-family: offbit-norm;
+    display: inline;
+}
+
+.item:hover{
+    cursor: pointer;
+}
+
+#item5:hover, #item6:hover{
+    cursor:default;
+}
+#item6{
+    letter-spacing:-0.16em;
+}
+.arrow{
+    display: inline-block;
+    background-image: url(images/arrow.svg);
+    width: 34px;
+    height: 34px;
+    background-repeat: no-repeat;
+    align-self: flex-end;
+    rotate: 45deg;
+    margin-left: -20px;
+}
+
+
+#item5{
+    font-family: barcode;
+    font-size: 66px;
+    align-content: center;
+    justify-self: center;
+}
+
+
+#item6{
+    font-family: dogica;
+    font-size: 13px;
+    text-align: center;
+    justify-self: center;
+}
+
+#design_wrapper{
+    z-index: 1;
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    transform: translate(100%, -200%);
+    width: auto;
+    height: 150vh;
+}
+
+#design{
+    padding: 1%;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    font-size: 128px;
+    color: rgb(0, 0, 0);
+    font-family: offbit-bold;
+}
+
+#design_grid{
+    position: fixed;
+    padding: 2%;
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+    grid-template-rows: 0.5fr;
+    grid-auto-flow: row dense;
+    left: 22%;
+    gap: 20px 20px;
+    background-color: aqua;
+}
+
+
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
